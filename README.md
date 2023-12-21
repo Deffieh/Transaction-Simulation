@@ -21,8 +21,8 @@ The objective of this project is to simulate a ledger containing data on monetar
 - SO_NODES_NUM **node** processes that process transactions received, charging a fee for their services."
 
 
-#### Users
-**User Process Operations:**
+## Users
+
 1. **Balance Calculation:**
    - Calculate the current balance based on the initial budget, summing income and expenses in ledger transactions.
    - Subtract the amounts of transactions sent but not yet recorded.
@@ -45,7 +45,7 @@ The objective of this project is to simulate a ledger containing data on monetar
 - If unable to send transactions for SO_RETRY consecutive attempts, terminate execution, notifying the master process.
 
 
-#### Nodes
+## Nodes
 
 - Each node privately stores a list of received transactions to process, called the transaction pool (can contain up to SO_TP_SIZE transactions, with SO_TP_SIZE > SO_BLOCK_SIZE).
 - If the node's transaction pool is full, any additional transactions are discarded and not executed. In such cases, the sender of the discarded transaction must be informed.
